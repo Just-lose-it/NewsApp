@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ZhipuApi {
 
     private static final String BASE_URL = "https://open.bigmodel.cn/";
-    private static final String API_KEY = "Bearer d3ed522fa7214f0bb578bf6582b16822.qYPjvJLm80x158FA";
+    private static final String API_KEY = "__YOUR__API__KEY__";
 
     public static void getSummary(String context, Callback<String> callback) {
         Retrofit retrofit = new Retrofit.Builder()
