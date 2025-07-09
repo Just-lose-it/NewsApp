@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:orientation="horizontal"
+        android:paddingVertical="6sp"
+        android:paddingHorizontal="12sp"
+        android:background="#cc6666"
+        android:gravity="right"
+        android:padding="10sp"
+        android:id="@+id/topBar">
+        <HorizontalScrollView
+            android:layout_width="350sp"
+            android:layout_marginHorizontal="0sp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/categoryBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="8dp"/>
+        </HorizontalScrollView>
+        <ImageView
+            android:layout_width="40sp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10sp"
+            android:id="@+id/modify"
+            android:src="@drawable/baseline_reorder_24"
+            android:layout_gravity="end" />
+    </LinearLayout>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@+id/bottomBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:orientation="horizontal"
+        android:paddingVertical="6sp"
+        android:paddingHorizontal="32sp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomBar"
+        android:background="#eeeeee">
+        <LinearLayout
+            android:layout_width="60sp"
+            android:layout_height="match_parent"
+            android:id="@+id/HomePage"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_home_24" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:text="主页"
+                android:gravity="center"
+                android:textColor="#bbbbbb"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="60sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/CategoryPage"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_list_alt_24_red" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:text="分类"
+                android:gravity="center"
+                android:textColor="#cc6666"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="60sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:id="@+id/InfoPage">
+            <ImageView
+
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_person_24"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20sp"
+                android:gravity="center"
+                android:text="我的信息"
+                android:textColor="#bbbbbb"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

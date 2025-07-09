@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="#ee6666"
+        android:orientation="horizontal"
+        android:id="@+id/topBar">
+        <Button
+            android:layout_width="100sp"
+            android:layout_height="match_parent"
+            android:id="@+id/BackButton"
+            android:background="#00000000"
+            android:text="返回"
+            android:textColor="#dddddd"
+            android:textSize="28sp"/>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/scroll"
+            android:padding="12sp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailTitle"
+                android:textStyle="bold"
+                android:textColor="#1f1e33"
+                android:text="标题"
+                android:textSize="28sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailInfo"
+
+                android:text="信息"
+                android:textSize="16sp"
+                android:paddingVertical="4sp"/>
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/detailPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:resize_mode="zoom"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailPic" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailAbstract"
+                android:textColor="#1f1e33"
+                android:text="摘要"
+                android:textSize="18sp"
+                android:paddingVertical="4sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/detailContext"
+                android:textColor="#1f1e33"
+                android:text="正文"
+                android:textSize="18sp"
+                android:paddingVertical="4sp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/likeButton"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:padding="10sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="40sp"
+        android:layout_marginVertical="60sp"
+        android:background="@drawable/white_circle"/>
+</RelativeLayout>
